@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Supranet</title>
+	<script>
+		var images = ["imagen1.png", "imagen2.png", "imagen3.png", "imagen4.png", "imagen5.png", "imagen6.png", "imagen7.png", "imagen8.png", "imagen9.png", "imagen10.png"];
+		var currentIndex = 0;
+		var intervalID = setInterval(changeImage, 5000);
+
+		function changeImage() {
+			var img = document.getElementById("image");
+			img.src = images[currentIndex];
+			currentIndex = (currentIndex + 1) % images.length;
+		}
+	</script>
+</head>
+<body>
+	<h1>10 Imágenes cada 5 segundos</h1>
+	<img id="image" src="imagen1.png" alt="Imagen 1">
+</body>
+</html>
